@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+ [v0.0.8](https://github.com/littleflute/a26/edit/master/README.md)
 
-You can use the [editor on GitHub](https://github.com/littleflute/a26/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+[SRV Disc 1](SRV Disc 1/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<audio controls id="player"> 
+  <source src="https://littleflute.github.io/a26/cd1/01 Track 1.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<div id="xd"> 
+</div>
+<script>
+var d = document.getElementById("xd"); 
+var html = d.innerHTML; 
+html += " a2<br>cd1<br>CD:<br>";
+for(var n=1; n<=19; n++)
+{	
+ 	html += fNewBtn(n);
 
-### Markdown
+} 
+d.innerHTML = html;
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+var p = document.getElementById("player");
+function f(i)
+{
+    var s = "https://littleflute.github.io/a26/cd1/";
+    if(i==111)
+    {
+        s += "01 Thunderbird.mp3";
+    } 
+    else
+    {
+        if(i<10) 
+        {
+    	    s += "0";
+        } 
+        s += i;
+        s += " Track ";
+        s += i;
+        s += ".mp3";
+    }
+	p.src = s; 
+    p.play();
+}
+function fNewBtn(i)
+{
+	var rHTML = "";
+    rHTML = "<button onclick='f(";
+    rHTML += i;
+    rHTML += ");'>";
+    rHTML += i;
+    rHTML += "</button>";
+    return rHTML;
+}
+</script>
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/littleflute/a26/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
